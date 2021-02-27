@@ -166,15 +166,15 @@ export default function PageOne(props: PageOneProps) {
                   style={{ color: "rgba(0, 0, 0, 0.54)", display: "flex", alignItems: "center" }}
                 >
                   <MyFiberManualRecordIcon style={{ fontSize: "0.75rem" }} />
-                  本月流量：<b>{`${latestData?.bw_counter_b}/`}</b>
-                  <b>{`${latestData?.monthly_bw_limit_b} GB`}</b>
+                  本月流量：<b>{`${latestData?.bw_counter_b || 0}/`}</b>
+                  <b>{`${latestData?.monthly_bw_limit_b || 0} GB`}</b>
                 </Typography>
                 <Typography
                   variant="body1"
                   style={{ color: "rgba(0, 0, 0, 0.54)", display: "flex", alignItems: "center" }}
                 >
                   <MyFiberManualRecordIcon style={{ fontSize: "0.75rem" }} />
-                  流量重置日：每月<b>{latestData?.bw_reset_day_of_month}</b>日
+                  流量重置日：每月<b>{latestData?.bw_reset_day_of_month || 0}</b>日
                 </Typography>
               </Paper>
             </Grid>
